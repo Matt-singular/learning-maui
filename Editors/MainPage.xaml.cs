@@ -26,8 +26,23 @@ public partial class MainPage : ContentPage
 
   private void OnClearClicked(object sender, EventArgs e)
   {
-    InputEditor.Text = string.Empty;
-    OutputEditor.Text = string.Empty;
+    // Gets the EditorName from the CommandParameter
+    var button = sender as Button;
+    var editorName = button.CommandParameter.ToString();
+
+    // Checks which Editor to clear
+    List<Editor?> editorsToClear = editorName switch
+    {
+      "InputEditor" => [InputEditor, OutputEditor],
+      "OutputEditor" => [OutputEditor],
+      _ => throw new ArgumentNullException(nameof(editorName), "You need to specify an EditorName for the event using the CommandParameter")
+    };
+
+    // Clear editors
+    foreach (var editor in editorsToClear)
+    {
+      editor!.Text = string.Empty;
+    }
   }
 
   private void OnCopyClicked(object sender, EventArgs e)

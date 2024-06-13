@@ -1,22 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Editors.MainPage">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Editors.MainPage"
+    xmlns:local="clr-namespace:Editors">
 
-    <Grid Padding="10" RowDefinitions="Auto,20,Auto,*" ColumnDefinitions="*,20,*">
+    <ContentPage.Resources>
+        <Style x:Key="MinimalButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="TextColor" Value="DarkGray"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderWidth" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid Padding="10" RowDefinitions="Auto,20,Auto,*,Auto" ColumnDefinitions="*,20,*">
 
         <!-- Format JSON Button -->
         <Button Grid.Row="0" Grid.ColumnSpan="3" Text="Format JSON" Clicked="OnFormatJsonClicked"/>
 
         <!-- Vertical Space -->
         <BoxView Grid.Row="1" Grid.ColumnSpan="3" Color="Transparent" HeightRequest="20"/>
-
-        <!-- Action Buttons -->
-        <!--
-        <Button Grid.Row="2" Grid.Column="0" Text="Clear" Clicked="OnClearClicked"/>
-        <Button Grid.Row="2" Grid.Column="0" Text="Copy" Clicked="OnCopyClicked" HorizontalOptions="Center"/>
-        <Button Grid.Row="2" Grid.Column="0" Text="Save" Clicked="OnSaveClicked" HorizontalOptions="End"/>
-        -->
 
         <!-- Input Editor -->
         <Editor Grid.Row="3" Grid.Column="0" x:Name="InputEditor" Placeholder="Enter JSON here" AutoSize="TextChanges" VerticalOptions="FillAndExpand" />
@@ -26,6 +32,20 @@
 
         <!-- Output Editor -->
         <Editor Grid.Row="3" Grid.Column="2" x:Name="OutputEditor" Placeholder="Formatted JSON will appear here" AutoSize="TextChanges" IsReadOnly="True" VerticalOptions="FillAndExpand" />
+
+        <!-- Minimal Buttons Grid for Input Editor -->
+        <Grid Grid.Row="4" Grid.Column="0" ColumnDefinitions="Auto,Auto,Auto" HorizontalOptions="Center">
+            <Button Grid.Column="0" Text="Clear" Clicked="OnClearClicked" CommandParameter="InputEditor" Style="{StaticResource MinimalButtonStyle}"/>
+            <Button Grid.Column="1" Text="Copy" Clicked="OnCopyClicked" Style="{StaticResource MinimalButtonStyle}"/>
+            <Button Grid.Column="2" Text="Save" Clicked="OnSaveClicked" Style="{StaticResource MinimalButtonStyle}"/>
+        </Grid>
+
+        <!-- Minimal Buttons Grid for Output Editor -->
+        <Grid Grid.Row="4" Grid.Column="2" ColumnDefinitions="Auto,Auto,Auto" HorizontalOptions="Center">
+            <Button Grid.Column="0" Text="Clear" Clicked="OnClearClicked" CommandParameter="OutputEditor" Style="{StaticResource MinimalButtonStyle}"/>
+            <Button Grid.Column="1" Text="Copy" Clicked="OnCopyClicked" Style="{StaticResource MinimalButtonStyle}"/>
+            <Button Grid.Column="2" Text="Save" Clicked="OnSaveClicked" Style="{StaticResource MinimalButtonStyle}"/>
+        </Grid>
 
     </Grid>
 
