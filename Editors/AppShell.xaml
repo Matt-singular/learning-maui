@@ -8,8 +8,7 @@
     Title="Editors">
 
     <FlyoutItem Title="Home">
-        <!--<ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>-->
-        <ShellContent ContentTemplate="{DataTemplate local:JsonFormatterPage}"/>
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
     </FlyoutItem>
 
 </Shell>
