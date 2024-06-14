@@ -1,15 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="SideMenus.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:SideMenus"
-    Shell.FlyoutBehavior="Disabled"
-    Title="SideMenus">
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:SideMenus"
+       x:Class="SideMenus.AppShell">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!-- Define the flyout menu items and associate them with pages -->
+    <FlyoutItem Title="Home" Icon="icon_home.png">
+        <ShellContent Route="HomePage" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>
+    <!-- Add more FlyoutItems for other pages as needed -->
 
 </Shell>
