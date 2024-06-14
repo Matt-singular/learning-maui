@@ -2,8 +2,6 @@
 
 public partial class StartupPage : ContentPage
 {
-  int count = 0;
-
   public StartupPage()
   {
     InitializeComponent();
@@ -11,11 +9,13 @@ public partial class StartupPage : ContentPage
 
   private void OnStartupWizardClicked(object sender, EventArgs e)
   {
-    if (Application.Current.MainPage is AppShell appShell)
-    {
-      //appShell.HasSetUpProject = true;
-      //appShell.InitialiseFlyoutItems();
-      Application.Current.MainPage = new AppShell(true);
-    }
+    // Re-initialise the AppShell to show the new Side menu items
+    Application.Current.MainPage = new AppShell(hasSetup: true);
+
+    //if (Application.Current.MainPage is AppShell appShell)
+    //{
+    //  appShell.HasSetUpProject = true;
+    //  appShell.InitialiseFlyoutItems();
+    //}
   }
 }
