@@ -66,10 +66,16 @@
 	  <Compile Update="MenuPage.xaml.cs">
 	    <DependentUpon>MenuPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="StartupPage.xaml.cs">
+	    <DependentUpon>StartupPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="MenuPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="StartupPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
