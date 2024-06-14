@@ -12,7 +12,6 @@
             <Setter Property="FontSize" Value="Small"/>
             <Setter Property="Padding" Value="10"/>
             <Setter Property="BorderWidth" Value="0"/>
-            <Setter Property="Cursor" Value="Hand"/>
         </Style>
     </ContentPage.Resources>
 
