@@ -1,7 +1,9 @@
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:SideMenus"
-       x:Class="SideMenus.AppShell">
+       x:Class="SideMenus.AppShell"
+       x:DataType="local:AppShell"
+       FlyoutBehavior="Locked">
 
     <!-- Define the flyout menu items and associate them with pages -->
     <FlyoutItem Title="Home" Icon="icon_home.png">
