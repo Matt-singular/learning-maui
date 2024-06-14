@@ -1,5 +1,5 @@
 # Editors
-This project focuses on learning the ins--and-outs of the `Editor` field.  
+This project focuses on learning the ins-and-outs of the `Editor` field.  
 
 To learn this a basic JSON formatter has been created.
 
