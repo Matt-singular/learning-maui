@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dropdowns.MainPage">-->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dropdowns.MainPage"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Dropdowns"
+             x:DataType="local:MainPage">
+
+    <VerticalStackLayout Spacing="25" Padding="30" HorizontalOptions="Fill" VerticalOptions="Start">
+        <!-- Hardcoded Dropdown Header --> 
+        <Label Text="Select an Option:"
+               HorizontalOptions="Start"/>
+        <!-- Hardcoded Dropdown Picker -->
+        <Picker x:Name="HardcodedDropdown" SelectedIndexChanged="OnChangeSelectedDropdownOption"
+                WidthRequest="{Binding QuarterScreenWidth}"
+                HorizontalOptions="Start" VerticalOptions="Start"
+                BackgroundColor="DarkSlateGrey"/>
+    </VerticalStackLayout>
+
+</ContentPage>
