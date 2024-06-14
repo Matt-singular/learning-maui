@@ -5,10 +5,14 @@
        x:DataType="local:AppShell"
        FlyoutBehavior="Locked">
 
-    <!-- Define the flyout menu items and associate them with pages -->
-    <FlyoutItem Title="Home" Icon="icon_home.png">
-        <ShellContent Route="HomePage" ContentTemplate="{DataTemplate local:MainPage}" />
-    </FlyoutItem>
-    <!-- Add more FlyoutItems for other pages as needed -->
+    <!-- Currently the flyout items have been added progammatically in the code behind, but below is the xaml implementation -->
+    
+    <!--<FlyoutItem Title="About" Icon="icon_home.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>-->
+    
+    <!--<FlyoutItem Title="Home" Icon="icon_home.png">
+    <ShellContent Route="HomePage" ContentTemplate="{DataTemplate local:MainPage}" />
+    </FlyoutItem>-->
 
 </Shell>
