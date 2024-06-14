@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editors", "Editors\Editors.csproj", "{954F26EE-BD7E-493D-AEF4-A861972F8E62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Editors", "Editors\Editors.csproj", "{954F26EE-BD7E-493D-AEF4-A861972F8E62}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aspects", "Aspects", "{4435B615-2659-45A4-839C-D2F7025948D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursorExtensions", "CursorExtensions\CursorExtensions.csproj", "{7FAA7138-F8F6-48A3-BE19-0C66CC7686DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,19 @@ Global
 		{954F26EE-BD7E-493D-AEF4-A861972F8E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{954F26EE-BD7E-493D-AEF4-A861972F8E62}.Release|Any CPU.Build.0 = Release|Any CPU
 		{954F26EE-BD7E-493D-AEF4-A861972F8E62}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7FAA7138-F8F6-48A3-BE19-0C66CC7686DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FAA7138-F8F6-48A3-BE19-0C66CC7686DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FAA7138-F8F6-48A3-BE19-0C66CC7686DE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7FAA7138-F8F6-48A3-BE19-0C66CC7686DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FAA7138-F8F6-48A3-BE19-0C66CC7686DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FAA7138-F8F6-48A3-BE19-0C66CC7686DE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{954F26EE-BD7E-493D-AEF4-A861972F8E62} = {4435B615-2659-45A4-839C-D2F7025948D4}
+		{7FAA7138-F8F6-48A3-BE19-0C66CC7686DE} = {4435B615-2659-45A4-839C-D2F7025948D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6EDA3C9A-5226-4291-86EF-A41DB822EF6E}
