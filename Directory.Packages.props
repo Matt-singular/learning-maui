@@ -1,0 +1,20 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Currently disabled -->
+    <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <!-- Microsoft Packages -->
+  <ItemGroup>
+  </ItemGroup>
+
+  <!-- ThirdParty Packages -->
+  <ItemGroup>
+  </ItemGroup>
+
+  <!-- Testing Packages -->
+  <ItemGroup>
+  </ItemGroup>
+
+</Project>
