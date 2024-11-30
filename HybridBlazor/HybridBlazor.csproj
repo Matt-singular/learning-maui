@@ -51,7 +51,9 @@
 
         <!-- Images -->
         <MauiImage Include="Resources\Images\*" />
-        <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+        <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208">
+          <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </MauiImage>
 
         <!-- Custom Fonts -->
         <MauiFont Include="Resources\Fonts\*" />
@@ -61,9 +63,20 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Content Remove="wwwroot\resources\images\blazortest.svg" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiAsset Include="wwwroot\resources\images\blazortest.svg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <BaseSize>168,208</BaseSize>
+      </MauiAsset>
     </ItemGroup>
 
 </Project>
